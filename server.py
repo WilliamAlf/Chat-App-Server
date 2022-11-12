@@ -13,7 +13,7 @@ socket.bind(("", 55555))
 clients = {}
 
 while True:
-    new_password, new_addr = socket.recvfrom(1024).decode()
+    new_password, new_addr = socket.recvfrom(1024)
     print(f"connection from {new_addr}")
     
     clients[new_addr] = new_password

@@ -13,12 +13,12 @@ socket.bind(("", 55555))
 clients = {}
 
 while True:
-    new_password, new_addr = socket.recvfrom(1024)
+    new_password, new_addr = socket.recvfrom(1024).decode()
     print(f"connection from {new_addr}")
     
     clients[new_addr] = new_password
     
-    socket.sendto(b"success", addr)
+    socket.sendto(b"success", new_addr)
     
     for addr, password in clients.items:
         if new_password == password:

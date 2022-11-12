@@ -6,8 +6,8 @@ server_port = 55555
 server = (server_ip, server_port)
 
 socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-socket.bind("", 50001)
-socket.sendto("pass", server)
+socket.bind(("", 50001))
+socket.sendto(b"pass", server)
 
 while True:
     data = socket.recv(1024).decode()

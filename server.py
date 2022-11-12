@@ -20,7 +20,7 @@ while True:
     
     socket.sendto(b"success", new_addr)
     
-    for addr, password in clients.items:
+    for addr, password in clients.items():
         if new_password == password:
             socket.sendto((addr[0], addr[1], knownport), new_addr)
             socket.sendto((new_addr[0], new_addr[1], knownport), addr)

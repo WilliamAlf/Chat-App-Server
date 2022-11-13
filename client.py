@@ -1,6 +1,6 @@
 import socket
 
-server_ip = "192.168.66.3"
+server_ip = "192.168.66.8"
 server_port = 55555
 
 server = (server_ip, server_port)
